@@ -3,34 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Consulting - SkoolZone</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>SkoolZone</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Tech Consulting Services</h1>
+        <div class="container">
+            <h1>Welcome to SkoolZone</h1>
+            <p>Your gateway to premier tech consulting, gaming, and web design services.</p>
+        </div>
     </header>
     <main>
         <section class="feature">
-            <h2>No Technical Knowledge Required</h2>
-            <p>Our tech consulting services are designed to be accessible for everyone. You don't need any technical knowledge to benefit from our expertise.</p>
+            <h2>Play Games</h2>
+            <p>Explore a wide range of exciting games. Enjoy seamless gaming experiences with just a click.</p>
+            <a href="/websites" class="feature-button">Play Now</a>
         </section>
         <section class="feature">
-            <h2>Reliable and Efficient</h2>
-            <p>We provide reliable and efficient tech solutions tailored to your needs, ensuring that your systems are always running smoothly.</p>
+            <h2>Tech Consulting</h2>
+            <p>Receive expert tech consulting services. We simplify your tech challenges with reliable and affordable solutions.</p>
+            <a href="/tech" class="feature-button">Learn More</a>
         </section>
         <section class="feature">
-            <h2>Affordable Services</h2>
-            <p>Our consulting services are cost-effective, providing you with the best solutions at a price that fits your budget.</p>
-        </section>
-        <section class="feature">
-            <h2>Get Started</h2>
-            <p>Contact us today to learn more about how our tech consulting services can help you. We're here to provide the support you need.</p>
-            <a href="/contact" class="feature-button">Get Started</a>
+            <h2>Custom Web Design</h2>
+            <p>Get custom-designed websites tailored to your needs. Our services are cost-effective and include a free subdomain under skoolzone.org.</p>
+            <a href="/websites" class="feature-button">Learn More</a>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 SkoolZone. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 SkoolZone. All rights reserved.</p>
+            <div class="mode-toggle">
+                <label for="mode-switch">Dark Mode</label>
+                <input type="checkbox" id="mode-switch">
+            </div>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

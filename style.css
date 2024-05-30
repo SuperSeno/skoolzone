@@ -1,0 +1,225 @@
+:root {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --header-background: #1e1e1e;
+    --button-background: #00e6e6;
+    --button-hover: #00bfbf;
+    --link-color: #00e6e6;
+}
+
+body.light-mode {
+    --background-color: #f9f9f9;
+    --text-color: #000000;
+    --header-background: #ffffff;
+    --button-background: #007acc;
+    --button-hover: #005a99;
+    --link-color: #007acc;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: var(--header-background);
+    transition: background-color 0.3s;
+}
+
+header h1 {
+    font-size: 3em;
+    color: var(--link-color);
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.feature {
+    background: var(--header-background);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    max-width: 600px;
+}
+
+.feature h2 {
+    color: var(--button-background);
+    font-size: 2em;
+}
+
+.feature p {
+    font-size: 1.1em;
+}
+
+.feature-button {
+    display: inline-block;
+    background-color: var(--button-background);
+    color: var(--background-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 15px;
+}
+
+.feature-button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-3px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--header-background);
+    transition: background-color 0.3s;
+}
+
+footer p {
+    margin: 0;
+}
+
+.mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.mode-toggle label {
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.mode-toggle input[type="checkbox"] {
+    width: 40px;
+    height: 20px;
+    appearance: none;
+    background-color: var(--button-background);
+    border-radius: 10px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.mode-toggle input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--background-color);
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s;
+}
+
+.mode-toggle input[type="checkbox"]:checked::before {
+    transform: translateX(20px);
+}
+
+/* Form Styles */
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    background: var(--header-background);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form h2 {
+    color: var(--button-background);
+    font-size: 2em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid var(--button-background);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--button-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .feature h2,
+    .contact-form h2 {
+        font-size: 1.5em;
+    }
+
+    .feature p,
+    .contact-form p {
+        font-size: 1em;
+    }
+
+    .feature-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
